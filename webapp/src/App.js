@@ -1,10 +1,12 @@
 import './App.css';
+import Routes from './Routes/Routes'
 
 function App() {
   return (
-    <div>
-      hey
-    </div>
+    <>
+      <h1 style={{textAlign:"center"}}></h1>
+      <Routes/>
+    </>
   );
 }
 

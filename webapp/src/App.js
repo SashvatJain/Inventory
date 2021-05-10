@@ -1,10 +1,11 @@
 import './App.css';
+import Header from './Components/Header/Header';
 import Routes from './Routes/Routes'
 
 function App() {
   return (
     <>
-      <h1 style={{textAlign:"center"}}></h1>
+      <Header/>
       <Routes/>
     </>
   );

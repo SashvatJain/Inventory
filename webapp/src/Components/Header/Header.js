@@ -1,67 +1,37 @@
 import React, { useState } from 'react';
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText
-} from 'reactstrap';
+import {useHistory } from 'react-router-dom';
+import AddItems from '../AddItems/AddItems';
+import Catalouge from '../Catalouge/Catalouge';
+
 import './Header.styles.css'
 
-const Header = (props) => {
-  const [isOpen, setIsOpen] = useState(false);
+const Header = () => {
+    const [viewCatalog, setviewCatalog] = useState(true)
 
-  const toggle = () => setIsOpen(!isOpen);
-
-  return (
-    <div>
-        <div class=" header">
-            Inventory Management
-    </div>
-      <Navbar color="light" light expand="md">
-
+    // const history=useHistory()
+    return (
         <div>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto" navbar>
-            <NavItem>
-              <NavLink href="/components/">Components</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
-            </NavItem>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                Options
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem>
-                  Option 1
-                </DropdownItem>
-                <DropdownItem>
-                  Option 2
-                </DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>
-                  Reset
-                </DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
-          </Nav>
-
-        </Collapse>
+            <div class=" header">
+                Inventory Management
+            </div>
+            <nav style={{ width: "100%", height: '100%' }}>
+                <div className="fluid-container" style={{ textAlign: "center" }}>
+                    <div style={{ display: "flex" }}>
+                        <div className="col button-wrapper">
+                            <button type="button" className="header-button" onClick={()=>{setviewCatalog(true)}}>Catalouge</button>
+                        </div>
+                        <div className="col button-wrapper">
+                            <button type="button" className="header-button" onClick={()=>{setviewCatalog(false)}}>Add Items</button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div style={{display:'flex'}}>
+            <Catalouge viewCatalog={viewCatalog}></Catalouge>
+            <AddItems viewCatalog={viewCatalog}></AddItems>
+            </div>
         </div>
-      </Navbar>
-      
-    </div>
-  );
+    );
 }
 
 export default Header;

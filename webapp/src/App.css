@@ -1,0 +1,17 @@
+.card1{
+    background-color:#e2e2e2;
+    min-height:50vh;
+    margin:20px;
+    position:fixed;
+    right: 0px;
+    left: 0px;
+    transition: all 2s ;
+}
+.catalogue-card{
+    right:1600px;
+    transition: all 2s;
+}
+.add-item-card{
+    left:1600px;
+    transition: all 2s;
+}

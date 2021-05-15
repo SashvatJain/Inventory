@@ -1,17 +1,38 @@
-.card1{
-    background-color:#e2e2e2;
-    min-height:50vh;
-    margin:20px;
-    position:fixed;
-    right: 0px;
+.card1 {
+    width: 96%;
+    background-color: #e2e2e2;
+    min-height: 50vh;
+    margin: 20px;
+    position: fixed;
     left: 0px;
-    transition: all 2s ;
+    transition: left 2s ease-in-out;
 }
-.catalogue-card{
-    right:1600px;
-    transition: all 2s;
+.card2 {
+    width: 96%;
+    background-color: #e2e2e2;
+    min-height: 50vh;
+    margin: 20px;
+    position: fixed;
+    right: 0px;
+    transition: right 2s ease-in-out;
 }
-.add-item-card{
-    left:1600px;
-    transition: all 2s;
+
+.catalogue-card {
+    width: 96%;
+    background-color: #e2e2e2;
+    min-height: 50vh;
+    margin: 20px;
+    position: fixed;
+    left: -1600px;
+    transition: all 2s ease-in-out;
+}
+
+.add-item-card {
+    width: 96%;
+    background-color: #e2e2e2;
+    min-height: 50vh;
+    margin: 20px;
+    position: fixed;
+    right: -1600px;
+    transition: right 2s  ease-in-out;
 }

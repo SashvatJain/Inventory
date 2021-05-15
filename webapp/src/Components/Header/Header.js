@@ -26,7 +26,8 @@ const Header = () => {
                     </div>
                 </div>
             </nav>
-            <div style={{display:'flex'}}>
+            <div style={{position:"fixed"}}>
+                
             <Catalouge viewCatalog={viewCatalog}></Catalouge>
             <AddItems viewCatalog={viewCatalog}></AddItems>
             </div>
